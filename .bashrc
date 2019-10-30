@@ -115,4 +115,19 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
 source /opt/ros/melodic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+alias cs="cd ~/catkin_ws/src"
+alias cm="cd ~/catkin_ws && catkin_make && cd -"
+alias cw="cd ~/catkin_ws"
+
+bind '"\C-n": history-search-forward'
+bind '"\C-p": history-search-backward'
+# 上矢印キー
+bind '"\e[A": history-search-backward'
+# 下矢印キー
+bind '"\e[B": history-search-forward'
+
+alias h="history 25"
